@@ -1,0 +1,11 @@
+<ul>
+    {% for it in results %}
+        <li>
+            <p>{{ it['type'] }} : {{ it['title'] }}</p>
+            <p>{{ it['answer'] }}</p>
+        </li>
+    {% else %}
+        <li>没有搜索到相关结果</li>
+    {% endfor %}
+</ul>
+

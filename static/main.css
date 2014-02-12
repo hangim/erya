@@ -1,0 +1,26 @@
+header div{
+    padding: 40px;
+}
+
+footer {
+    padding-top: 40px;
+}
+
+.tab-pane {
+    min-height: 400px;
+}
+
+#search input {
+    display:inline-block;
+    width:78%;
+}
+
+#search button {
+    display:inline-block;
+    width:20%;
+    margin-top: -1px;
+}
+
+#result {
+    margin-top: 30px;
+}
