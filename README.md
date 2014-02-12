@@ -14,7 +14,7 @@ The exam database of [erya](http://tsk.erya100.com)
 
 * 数据库
 
-> Sqlite3
+> SQLite3
 
 ---
 
