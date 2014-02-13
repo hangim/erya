@@ -14,8 +14,8 @@ def before_request():
         g.c = g.db.cursor()
 
 ############################################################
-@app.teardown_appcontext
-def teardown_appcontext(e):
+@app.teardown_request
+def teardown_request(e):
     if hasattr(g, 'c'):
         g.c.close()
     if hasattr(g, 'db'):
