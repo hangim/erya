@@ -1,0 +1,27 @@
+server {
+	listen 443 ssl spdy;
+	server_name example.com;
+
+    ssl_certificate     /home/key/erya/example.crt;
+    ssl_certificate_key /home/key/erya/example.key;
+
+
+	access_log /var/log/erya/access.log combined;
+	error_log  /var/log/erya/error.log  crit;
+
+	location / {
+		include uwsgi_params;
+		uwsgi_pass 127.0.0.1:9000;
+		uwsgi_param UWSGI_PYHOME /home/web/erya;
+		uwsgi_param UWSGI_CHDIR  /home/web/erya;
+		uwsgi_param UWSGI_SCRIPT erya:app;
+	}
+
+	location /static/ {
+		alias /home/web/erya/static/;
+	}
+	
+	location /robots.txt {
+		alias /home/web/erya/static/robots.txt;
+	}
+}
