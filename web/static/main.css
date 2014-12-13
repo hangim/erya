@@ -1,0 +1,22 @@
+.container {
+  width: auto;
+  max-width: 680px;
+}
+
+.input-group {
+  padding-bottom: 20px;
+}
+
+#search {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h5 {
+  padding-top: 20px;
+  line-height: 2;
+}
+
+.answer {
+  padding-left:40px;
+}
